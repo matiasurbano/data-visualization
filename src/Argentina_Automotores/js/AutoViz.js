@@ -32,7 +32,7 @@ var AutoViz = {
 
         $.ajax({
           url: this.resourceUrl ,
-          dataType: 'text/javascript'
+          dataType: 'text/plain'
         }).done(function( kml ) {
             log('KML template: COMPLETO');
             kmlTemplate = kml;
