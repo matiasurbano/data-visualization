@@ -61,19 +61,12 @@
 
 			var placemarkS = placemark.getStyleSelector().getPolyStyle();
 
-			// placemark.setDescription('New label');
 			placemarkS.getColor().set('50'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6));
 
 		}
 		
 
-		  
 
-		// var lineStyle = polygonPlacemark.getStyleSelector().getLineStyle();
-		// lineStyle.setWidth(5);
-		// lineStyle.getColor().set('9900ffff');
-		
-		
 		initialized=true;
 
 		log('Render COMPLETO');
@@ -86,7 +79,7 @@
 	}
 
 	function init() {
-		google.earth.createInstance('map', initCB, failureCB);					
+		google.earth.createInstance('map', initCB, failureCB);
 
 	}
 

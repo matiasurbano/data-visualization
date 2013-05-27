@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>D3 Inception</title>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+<body>
+    <style type="text/css">
+      
+      circle.happy{
+        fill: white;
+        stroke: green;
+      }
+      circle.angry{
+        fill: red;
+        stroke: black;
+      }
+
+    </style>
+
+
+    <script type="text/javascript">
+        var 
+          w = 500,h = 200,
+          svg = d3.select("body")
+            .append("svg")
+            .attr('width',w)
+            .attr('height',h);
+
+        var dataset = [ 5, 10, 15, 20, 25 ];
+        var circles = svg.selectAll('circle')
+          .data(dataset)
+          .enter()
+          .append('circle');
+
+        circles.attr('cx',function(d,i){
+          return (i*50)+25;
+        })
+        .attr('cy',h/2)
+        .attr('r',function(d){
+          return d;
+        });
+
+     
+    </script>
+</body>
+</html>

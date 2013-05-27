@@ -5,7 +5,13 @@
 	<link href="css/style.css" rel="stylesheet" media="screen" />
 </head>
 <body>
+	<style type="text/css">
+		div.bars{
+			width: 100%;
+		}
+	</style>
 	<div id="content">
+		<div class="bars"></div>
 		<div id="filters">
 			<h1 id="description">Visualización de cantidad autos matriculados en Argentina.</h1>
 			<div class="field">
@@ -13,15 +19,15 @@
 				<select id="anio" name="anio" autocomplete="off">
 					<option value="2012">2012</option>
 					<option value="2011">2011</option>
-					<!--<option value="2010">2010</option>
+					<option value="2010">2010</option>
 					<option value="2009">2009</option>
 					<option value="2008">2008</option>
-					<option value="2012">2007</option>
-					<option value="2011">2006</option>
-					<option value="2010">2005</option>
-					<option value="2009">2004</option>
-					<option value="2008">2003</option>
-					<option value="2008">2002</option>-->
+					<option value="2007">2007</option>
+					<option value="2006">2006</option>
+					<option value="2005">2005</option>
+					<option value="2004">2004</option>
+					<option value="2003">2003</option>
+					<option value="2002">2002</option>
 				</select>
 			</div>
 			<div class="field">
@@ -56,15 +62,19 @@
 
 		</div>
 		<div id="map"></div>
+	</br></br>
+	<div id="source" style="padding: 20px; clear:both;">
+		Fuente: <a target="_blank" href="http://www.dnrpa.gov.ar">DNRPA - Dirección Nacional de Registros nacionales de Automotor</a>.</div>
+	div id="source"><a href="http://restopengov.org/" target="_blank"><img src="http://restopengov.org/wp-content/uploads/2012/05/powered.png" /></a></div>
 	</div>
 	
-	<div id="source">Fuente: <a target="_blank" href="http://www.dnrpa.gov.ar">DNRPA - Dirección Nacional de Registros nacionales de Automotor</a>.</div>
-	<!--div id="source"><a href="http://restopengov.org/" target="_blank"><img src="http://restopengov.org/wp-content/uploads/2012/05/powered.png" /></a></div-->
 
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 	
-	
+
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	<script type="text/javascript" src="js/underscore-min.js"></script>
+
 	<script type="text/javascript" src="js/jquery-2.0.1.min.js"></script>
 	<script type="text/javascript" src="js/RestOpenGov.js"></script>
 
