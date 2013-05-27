@@ -24,7 +24,7 @@
 		log('KML template: cargando...');
 
 		AutoViz = AutoViz.init({
-			resourceUrl : 'provincias_argentina.kml'
+			resourceUrl : 'docs/kml/provincias_argentina.kml'
 		});
 
 	}
@@ -69,9 +69,9 @@
 
 		  
 
-		var lineStyle = polygonPlacemark.getStyleSelector().getLineStyle();
-		lineStyle.setWidth(5);
-		lineStyle.getColor().set('9900ffff');
+		// var lineStyle = polygonPlacemark.getStyleSelector().getLineStyle();
+		// lineStyle.setWidth(5);
+		// lineStyle.getColor().set('9900ffff');
 		
 		
 		initialized=true;

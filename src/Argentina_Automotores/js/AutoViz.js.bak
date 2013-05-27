@@ -1,15 +1,16 @@
 var AutoViz = {
     init:function(config){
         this.resourceUrl = config.resourceUrl;
-		this.fetchResource();
-        
-        
         this.data = null;
         this.cache();
-        this.bindEvents();
-        
         //first resource fetch
-		return this;
+        this.fetchResource();
+        this.bindEvents();
+
+
+
+
+        return this;
         
     },
     cache:function(){
@@ -20,31 +21,33 @@ var AutoViz = {
     },
     bindEvents:function(){
         _.bindAll(AutoViz,'prepareResults','renderResults');
-        this.btnVizualizar.on('click', this.btnVizualizar_click(this));
+        // this.btnVizualizar.on('click', this.btnVizualizar_click(this));
     },
     btnVizualizar_click:function(that){
         that.map.html('');
-        // that.search(that.anio.val(), that.marca.val());
-        this.fetchResource();
+        that.search(that.anio.val(), that.marca.val());
     },
     fetchResource:function(){
         var that =this;
 
         $.ajax({
-          url: this.resourceUrl ,
-          dataType: 'text',
+          // url: this.resourceUrl ,
+          url: 'docs/kml/provincias_argentina.kml' ,
+          dataType: 'text/plain',
         }).done(function( kml ) {
             log('KML template: COMPLETO__');
             that.kmlTemplate = kml;
+            console.log(kml);
             loader(false);
             // Trigger Search
-            that.search(that.anio.val(), that.marca.val());
+            that.search;
         }).fail(
             function(e) { 
                 console.log('ERROR: Ajax Error');
+                console.log(e);
         }).always(function(e) { 
                 console.log('COMPLETE: Ajax');
-                loader(false);
+                console.log(e);
         });
     },
     search:function(anio,marca){
