@@ -24,7 +24,8 @@
 		log('KML template: cargando...');
 
 		AutoViz = AutoViz.init({
-			resourceUrl : 'docs/kml/provincias_argentina.kml'
+			// resourceUrl : 'docs/kml/provincias_argentina.kml'
+			resourceUrl : 'http://showcase-devdemo.rhcloud.com/autoViz/docs/kml/provincias_argentina.kml'
 		});
 
 	}
